@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Club Checker</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    
+    <style>
+        body {
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+            width: 350px;
+            text-align: center;
+        }
+
+        h1 {
+            color: black;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 0.7rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            color: black;
+            box-sizing: border-box;
+            font-size: 0.9rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            color: black;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: gray;
+        }
+
+        .result-box {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 6px;
+            min-height: 40px;
+            font-size: 0.85rem;
+            color: black;
+            word-break: break-word;
+        }
+    </style>
+    <script type="py" config='{"files": {"main.py": "main.py"}}'></script>
+    <script type="py" src="main.py"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Math Club Checker</h1>
+        <div></div>
+
+        <div class="input-group">
+            <input type="text" id="first_name" placeholder="First Name">
+        </div>
+        <div class="input-group">
+            <input type="text" id="last_name" placeholder="Last Name">
+        </div>
+
+        <button py-click="verify_candidate">ENTER</button>
+
+        <div id="result-display" class="result-box"></div>
+    </div>
